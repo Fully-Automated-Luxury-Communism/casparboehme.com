@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caspar Böhme — Builder · Technologist · Product Designer</title>
+<meta name="description" content="Builder, Technologist und Product Designer mit 15+ Jahren Erfahrung. AI, Blockchain, Product Design, Creative Direction.">
+<meta name="author" content="Caspar Böhme">
+<link rel="canonical" href="https://casparboehme.com/cv">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Caspar Böhme — Builder · Technologist · Product Designer">
+<meta property="og:description" content="Builder, Technologist und Product Designer mit 15+ Jahren Erfahrung. AI, Blockchain, Product Design, Creative Direction.">
+<meta property="og:url" content="https://casparboehme.com/cv">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="de_DE">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Caspar Böhme — Builder · Technologist · Product Designer">
+<meta name="twitter:description" content="15+ Jahre Ventures. AI, Blockchain, Product Design.">
+
+<!-- Favicon (inline SVG as data URI — no extra file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230d1117'/><text x='6' y='24' font-family='monospace' font-size='24' font-weight='bold' fill='%2358d5ba'>C</text></svg>">
+
+<!-- Theme color for mobile browsers -->
+<meta name="theme-color" content="#0d1117">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #1c2128;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --dim: #6e7681;
+    --cyan: #58d5ba;
+    --blue: #79c0ff;
+    --purple: #d2a8ff;
+    --orange: #ffa657;
+    --yellow: #e3b341;
+    --green: #7ee787;
+    --red: #ff7b72;
+    --pink: #f78166;
+    --accent: #1f6feb;
+    --desc: #a5d6a7;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 50px 80px;
+  }
+
+  /* HEADER */
+  .header-box {
+    border: 1px solid var(--cyan);
+    padding: 24px 30px;
+    margin-bottom: 40px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(88,213,186,0.03) 0%, transparent 50%);
+  }
+  .header-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+  }
+  .header-role {
+    color: var(--cyan);
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .header-contact { color: var(--dim); font-size: 12px; }
+  .header-contact a {
+    color: var(--dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--border);
+    transition: all 0.2s;
+  }
+  .header-contact a:hover { color: var(--cyan); border-color: var(--cyan); }
+  .sep { color: #30363d; margin: 0 8px; }
+
+  /* SECTIONS */
+  .section { margin-top: 44px; }
+  .cmd { font-size: 14px; margin-bottom: 16px; color: var(--dim); }
+  .cmd .prompt { color: var(--green); }
+  .cmd .path { color: var(--blue); }
+  .cmd .command { color: #fff; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* PROSE */
+  .prose { color: var(--text); line-height: 1.8; margin: 10px 0; }
+  .prose strong { color: #fff; }
+  .prose a { color: var(--cyan); text-decoration: none; border-bottom: 1px dotted var(--cyan); }
+  .prose a:hover { border-bottom-style: solid; }
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 12px 20px;
+    margin: 16px 0;
+    color: var(--dim);
+    background: var(--bg2);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* COMPETENCY GRID */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    margin: 12px 0;
+  }
+  .comp-item {
+    background: var(--bg2);
+    border-left: 3px solid var(--cyan);
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.25s;
+    user-select: none;
+    position: relative;
+  }
+  .comp-item:hover {
+    background: var(--bg3);
+    color: #fff;
+    transform: translateX(3px);
+  }
+  .comp-item.active {
+    background: var(--bg3);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px var(--border);
+  }
+  .comp-item .count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg);
+    color: var(--dim);
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .comp-item:hover .count,
+  .comp-item.active .count { opacity: 1; }
+
+  /* Color assignments */
+  .comp-item:nth-child(2) { border-color: var(--orange); }
+  .comp-item:nth-child(3) { border-color: var(--purple); }
+  .comp-item:nth-child(4) { border-color: var(--yellow); }
+  .comp-item:nth-child(5) { border-color: var(--green); }
+  .comp-item:nth-child(6) { border-color: var(--red); }
+  .comp-item:nth-child(7) { border-color: var(--blue); }
+  .comp-item:nth-child(8) { border-color: var(--cyan); }
+  .comp-item:nth-child(9) { border-color: var(--pink); }
+  .comp-item:nth-child(10) { border-color: var(--purple); }
+  .comp-item:nth-child(11) { border-color: var(--green); }
+  .comp-item:nth-child(12) { border-color: var(--blue); }
+
+  /* FILTER HINT */
+  .filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--dim);
+    min-height: 24px;
+  }
+  .filter-label { color: var(--yellow); }
+  .filter-reset {
+    color: var(--dim);
+    cursor: pointer;
+    border-bottom: 1px dotted var(--dim);
+    transition: all 0.2s;
+    display: none;
+  }
+  .filter-reset:hover { color: var(--cyan); border-color: var(--cyan); }
+  .filter-reset.visible { display: inline; }
+
+  /* EXPERIENCE CARDS */
+  .exp-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 14px 0;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+  .exp-card.dimmed {
+    opacity: 0.15;
+    transform: scale(0.98);
+    filter: grayscale(0.5);
+  }
+  .exp-card.highlighted {
+    box-shadow: 0 0 20px rgba(88,213,186,0.08);
+  }
+  .exp-header {
+    padding: 16px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .exp-rolle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .exp-zeit {
+    font-size: 12px;
+    color: var(--dim);
+  }
+  .exp-org {
+    padding: 0 20px 6px;
+    font-size: 12px;
+  }
+  .exp-org a {
+    color: var(--cyan);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(88,213,186,0.3);
+    transition: all 0.2s;
+  }
+  .exp-org a:hover { border-bottom-color: var(--cyan); }
+  .exp-org .loc { color: var(--dim); }
+  .exp-awards {
+    padding: 4px 20px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .award-tag {
+    background: rgba(227,179,65,0.12);
+    color: var(--yellow);
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(227,179,65,0.2);
+  }
+  .exp-desc {
+    padding: 8px 20px 12px;
+    font-size: 12px;
+    color: var(--desc);
+    line-height: 1.8;
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    background: rgba(165,214,167,0.02);
+  }
+  .exp-desc::before {
+    content: '// ';
+    color: var(--dim);
+    font-style: normal;
+  }
+  .exp-tags {
+    padding: 8px 20px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .exp-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--bg);
+    color: var(--dim);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .exp-tag.matched {
+    color: var(--cyan);
+    border-color: var(--cyan);
+    background: rgba(88,213,186,0.08);
+  }
+  .exp-grant {
+    padding: 4px 20px 8px;
+    font-size: 11px;
+  }
+  .exp-grant-tag {
+    background: rgba(121,192,255,0.1);
+    color: var(--blue);
+    padding: 2px 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(121,192,255,0.2);
+  }
+
+  /* STACK */
+  pre {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 22px;
+    overflow-x: auto;
+    margin: 12px 0 20px;
+    font-size: 12.5px;
+    line-height: 1.8;
+  }
+  .lang-tag { float: right; color: var(--dim); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+  .yk { color: var(--blue); }
+  .yv { color: var(--orange); }
+  .yl { color: var(--cyan); }
+  .bv { color: var(--blue); }
+  .bs { color: var(--orange); }
+  .bc { color: var(--dim); font-style: italic; }
+
+  /* LINKS */
+  .links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 12px 0;
+  }
+  .link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--bg2);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .link-item:hover { border-color: var(--cyan); background: var(--bg3); }
+  .link-label { color: var(--dim); font-size: 11px; min-width: 100px; }
+  .link-url { color: var(--cyan); font-size: 12px; }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cursor-blink { animation: blink 1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  @media (max-width: 700px) {
+    .container { padding: 20px; }
+    .comp-grid { grid-template-columns: 1fr 1fr; }
+    .links-grid { grid-template-columns: 1fr; }
+    .exp-header { flex-direction: column; gap: 4px; }
+  }
+
+  @media print {
+    body { background: #0d1117; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .comp-item { cursor: default; }
+  }
+  .tw-cursor {
+    color: var(--green);
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+  }
+  .tw-cursor.done { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header-box">
+    <div class="header-name">CASPAR BÖHME</div>
+    <div class="header-role">Builder · Technologist · Product Designer</div>
+    <div class="header-contact">
+      <a href="tel:+4915110014266">+49 151 1001 42 66</a>
+      <span class="sep">—</span>
+      <a href="mailto:casparboehme@googlemail.com">casparboehme@googlemail.com</a>
+      <span class="sep">—</span>
+      <a href="https://linkedin.com/in/caspar-boehme" target="_blank">linkedin.com/in/caspar-boehme</a>
+      <span class="sep">—</span>
+      Berlin, Germany
+    </div>
+  </div>
+
+  <!-- PROFIL -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">cat</span> <span class="path">profil.md</span></div>
+    <p class="prose">Builder, Technologist und Product Designer mit <strong>15+ Jahren</strong> Erfahrung im Aufbau eigener Ventures. Ich arbeite täglich mit AI und LLMs — baue Bots, experimentiere mit autonomen Coding Pipelines und entwickle AI-gestützte Systeme für meine eigenen Projekte. Von Marketing, Kommunikation, Buchhaltung bis Logistik.</p>
+    <blockquote><span id="typewriter">Zutiefst neugierig, wie AI Organisationen transformieren kann und wie wir bessere Systeme bauen, die Menschen im Beruf befähigen, sich auf ihre Kernaufgabe konzentrieren zu können, statt t&#228;gliche Sisyphos Arbeit zu leisten.</span><span class="tw-cursor" style="display:none">⏎</span></blockquote>
+  </div>
+
+  <hr>
+
+  <!-- KERNKOMPETENZEN -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">ls</span> <span class="path">kernkompetenzen/</span> <span style="color:var(--dim);font-size:11px">  # click to filter</span></div>
+    <div class="comp-grid" id="compGrid">
+      <div class="comp-item" data-comp="AI & LLM">AI & LLM<span class="count">2</span></div>
+      <div class="comp-item" data-comp="Product Design">Product Design<span class="count">4</span></div>
+      <div class="comp-item" data-comp="Blockchain & DeFi">Blockchain & DeFi<span class="count">4</span></div>
+      <div class="comp-item" data-comp="Org. Transformation">Org. Transformation<span class="count">2</span></div>
+      <div class="comp-item" data-comp="Workflow Automation">Workflow Automation<span class="count">2</span></div>
+      <div class="comp-item" data-comp="Creative Direction">Creative Direction<span class="count">4</span></div>
+      <div class="comp-item" data-comp="Computational Design">Computational Design<span class="count">2</span></div>
+      <div class="comp-item" data-comp="Knowledge Systems">Knowledge Systems<span class="count">1</span></div>
+      <div class="comp-item" data-comp="D2C E-Commerce">D2C E-Commerce<span class="count">1</span></div>
+      <div class="comp-item" data-comp="Brand Identity">Brand Identity<span class="count">5</span></div>
+      <div class="comp-item" data-comp="Bot Development">Bot Development<span class="count">1</span></div>
+      <div class="comp-item" data-comp="Leadership">Leadership<span class="count">6</span></div>
+    </div>
+    <div class="filter-bar">
+      <span id="filterLabel"></span>
+      <span class="filter-reset" id="filterReset" onclick="resetFilter()">× clear filter</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ERFAHRUNG -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">cat</span> <span class="path">erfahrung.json</span></div>
+    <div id="expContainer">
+
+      <div class="exp-card" data-tags="AI & LLM,D2C E-Commerce,Product Design,Workflow Automation,Knowledge Systems,Leadership,Brand Identity">
+        <div class="exp-header"><span class="exp-rolle">Gründer & Geschäftsführer</span><span class="exp-zeit">2020 — heute</span></div>
+        <div class="exp-org"><a href="https://sumobaby.com" target="_blank">Sumo GmbH — SUMO Baby</a> <span class="loc">— Berlin</span></div>
+        <div class="exp-awards"><span class="award-tag">★ Red Dot Design Award 2021</span><span class="award-tag">★ Deutscher Nachhaltigkeitspreis 2021</span><span class="award-tag">★ TechTextil Innovation Award 2022</span></div>
+        <div class="exp-desc">Preisgekröntes Circular-Economy-Startup im D2C Baby Care Bereich. Transformation hin zu einem Unternehmen als autonome Intelligenz — Aufbau einer Wissensbasis, die institutionelles Wissen in automatisierten Workflows in die eigene Unternehmenssprache überführt.</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="AI & LLM">AI & LLM</span><span class="exp-tag" data-tag="D2C E-Commerce">D2C E-Commerce</span><span class="exp-tag" data-tag="Product Design">Product Design</span><span class="exp-tag" data-tag="Workflow Automation">Workflow Automation</span><span class="exp-tag" data-tag="Knowledge Systems">Knowledge Systems</span><span class="exp-tag" data-tag="Leadership">Leadership</span><span class="exp-tag" data-tag="Brand Identity">Brand Identity</span></div>
+      </div>
+
+      <div class="exp-card" data-tags="AI & LLM,Bot Development,Blockchain & DeFi,Workflow Automation">
+        <div class="exp-header"><span class="exp-rolle">Unabhängige AI & Bot-Entwicklung</span><span class="exp-zeit">2025 — heute</span></div>
+        <div class="exp-org"><span style="color:var(--cyan)">Personal R&D — LLM-Experimente, Trading Bots, Autonome Agenten</span> <span class="loc">— Berlin</span></div>
+        <div class="exp-desc">Bau von Bots und Experimentation mit LLMs und AI im Bereich Trading, Data Pipelines und autonomes Coding. Claude Code und OpenAI APIs für autonome Workflows, Microservices auf Northflank, Echtzeit-Datensysteme. Aktiv in Prediction Markets (Polymarket) und dezentralen Exchanges (Hyperliquid).</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="AI & LLM">AI & LLM</span><span class="exp-tag" data-tag="Bot Development">Bot Development</span><span class="exp-tag" data-tag="Blockchain & DeFi">Blockchain & DeFi</span><span class="exp-tag" data-tag="Workflow Automation">Workflow Automation</span></div>
+      </div>
+
+      <div class="exp-card" data-tags="Product Design,Computational Design,AI & LLM,Brand Identity">
+        <div class="exp-header"><span class="exp-rolle">Product Designer & Developer</span><span class="exp-zeit">2024 — 2025</span></div>
+        <div class="exp-org"><a href="https://www.ruiin.xyz" target="_blank">Ruiin — Modulares Footwear-Projekt</a> <span class="loc">— Berlin</span></div>
+        <div class="exp-grant"><span class="exp-grant-tag">⬡ Worth Grant — European Innovation Council and SMEs Executive Agency (EISMEA)</span></div>
+        <div class="exp-desc">Modulares Schuhprojekt mit AI-getriebenem Computational Form-Finding über nTopology (nTop). Brücke zwischen Product Design und generativem Engineering für additive Fertigung.</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="Product Design">Product Design</span><span class="exp-tag" data-tag="Computational Design">Computational Design</span><span class="exp-tag" data-tag="AI & LLM">AI & LLM</span><span class="exp-tag" data-tag="Brand Identity">Brand Identity</span></div>
+      </div>
+
+      <div class="exp-card" data-tags="Creative Direction,Brand Identity,Blockchain & DeFi,Leadership">
+        <div class="exp-header"><span class="exp-rolle">Creative Director (Freelance)</span><span class="exp-zeit">2023 — heute</span></div>
+        <div class="exp-org"><a href="https://etherlaken.com" target="_blank">Etherlaken — Civilisation Accelerator</a> <span class="loc">— Interlaken</span></div>
+        <div class="exp-desc">Strategische Narrative und CI-Entwicklung für einen Civilisation Accelerator — Umnutzung eines ehemaligen Freizeitparks zu einem Hub für visionäre Communities aus Wissenschaft, Technologie, Blockchain, Philosophie und Architektur.</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="Creative Direction">Creative Direction</span><span class="exp-tag" data-tag="Brand Identity">Brand Identity</span><span class="exp-tag" data-tag="Blockchain & DeFi">Blockchain & DeFi</span><span class="exp-tag" data-tag="Leadership">Leadership</span></div>
+      </div>
+
+      <div class="exp-card" data-tags="Creative Direction,Org. Transformation,Leadership">
+        <div class="exp-header"><span class="exp-rolle">Co-Founder & Creative Director</span><span class="exp-zeit">2020 — 2024</span></div>
+        <div class="exp-org"><a href="https://letsdefinecreative.com" target="_blank">define-creative GmbH</a> <span class="loc">— Berlin</span></div>
+        <div class="exp-desc">Metaversity — Mixed-Reality-Bildungsplattform mit der TU München. Creative Direction für Eventreihen der BMW Foundation (Respond Accelerator, Münchner Sicherheitskonferenz).</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="Creative Direction">Creative Direction</span><span class="exp-tag" data-tag="Org. Transformation">Org. Transformation</span><span class="exp-tag" data-tag="Leadership">Leadership</span></div>
+      </div>
+
+      <div class="exp-card" data-tags="Blockchain & DeFi,Creative Direction,Leadership,Org. Transformation,Brand Identity">
+        <div class="exp-header"><span class="exp-rolle">Gründer</span><span class="exp-zeit">2014 — 2018</span></div>
+        <div class="exp-org"><a href="https://navel.la" target="_blank">NAVEL.LA — Art & Technology Incubator</a> <span class="sep">—</span> <a href="https://instagram.com/navel.la" target="_blank" style="color:var(--dim);font-size:11px">@navel.la</a> <span class="loc">— Los Angeles</span></div>
+        <div class="exp-desc">Non-Profit Art & Technology Incubator. Blockchain, VR, zeitgenössischer Diskurs. Co-Hosting des Ethereum Test Networks. 400+ Veranstaltungen.</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="Blockchain & DeFi">Blockchain & DeFi</span><span class="exp-tag" data-tag="Creative Direction">Creative Direction</span><span class="exp-tag" data-tag="Leadership">Leadership</span><span class="exp-tag" data-tag="Org. Transformation">Org. Transformation</span><span class="exp-tag" data-tag="Brand Identity">Brand Identity</span></div>
+      </div>
+
+      <div class="exp-card" data-tags="Creative Direction,Product Design,Leadership,Brand Identity,Computational Design">
+        <div class="exp-header"><span class="exp-rolle">Gründer</span><span class="exp-zeit">2016 — 2017</span></div>
+        <div class="exp-org"><a href="https://navel.live" target="_blank">NAVEL.LIVE</a> <span class="sep">—</span> <a href="https://instagram.com/navel.live" target="_blank" style="color:var(--dim);font-size:11px">@navel.live</a> <span class="loc">— Los Angeles</span></div>
+        <div class="exp-desc">Erster Mixed-Reality-Broadcast-Channel. 50+ Broadcasts. Exit 2017 — Fusion mit Vrenetic.</div>
+        <div class="exp-tags"><span class="exp-tag" data-tag="Creative Direction">Creative Direction</span><span class="exp-tag" data-tag="Product Design">Product Design</span><span class="exp-tag" data-tag="Leadership">Leadership</span><span class="exp-tag" data-tag="Brand Identity">Brand Identity</span><span class="exp-tag" data-tag="Computational Design">Computational Design</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- STACK -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">cat</span> <span class="path">stack.yml</span></div>
+    <pre><span class="lang-tag">yaml</span><span class="yk">languages</span>:  <span class="yv">Python · JavaScript/Node.js · SQL · Solidity</span>
+<span class="yk">ai_llm</span>:     <span class="yv">Claude Code · OpenClaw · Codex · ManusAI</span>
+<span class="yk">ml</span>:         <span class="yv">Optuna · LightGBM · GAN</span>
+<span class="yk">data</span>:       <span class="yv">DuckDB · Pandas · Parquet · PostgreSQL · SQLite · Redis · MCP · Obsidian</span>
+<span class="yk">infra</span>:      <span class="yv">Northflank · GitHub · Docker · WebSocket · REST APIs</span>
+<span class="yk">blockchain</span>: <span class="yv">Ethereum · Polygon · Hyperliquid · DeFi · on-chain analytics</span>
+<span class="yk">automation</span>: <span class="yv">n8n · Make.com · eigene Python Pipelines</span>
+<span class="yk">design</span>:     <span class="yv">nTopology · Rhino · Adobe CS</span>
+<span class="yk">business</span>:   <span class="yv">Shopify · JTL · Lexoffice · Meta Business Suite · Slack · Canva · Miro</span>
+<span class="yk">methoden</span>:   <span class="yv">GSD-Build · BMAD</span></pre>
+  </div>
+
+  <hr>
+
+  <!-- AUSBILDUNG -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">cat</span> <span class="path">ausbildung.md</span></div>
+    <p class="prose"><strong>BA (Hons) Product Development and Design</strong> <span style="color:var(--dim)">// 2011</span><br>
+    <a href="https://www.arts.ac.uk/colleges/london-college-of-fashion/">London College of Fashion</a>, University of the Arts London (UAL) — London</p>
+  </div>
+
+  <hr>
+
+  <!-- SPRACHEN -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">echo</span> <span class="path">$LANGUAGES</span></div>
+    <pre><span class="lang-tag">bash</span><span class="bv">DEUTSCH</span>=<span class="bs">"Muttersprache"</span>
+<span class="bv">ENGLISCH</span>=<span class="bs">"vertragsicher (C1/C2)"</span>  <span class="bc"># London & Los Angeles, 12+ Jahre</span></pre>
+  </div>
+
+  <hr>
+
+  <!-- LINKS -->
+  <div class="section">
+    <div class="cmd"><span class="prompt">❯</span> <span class="command">cat</span> <span class="path">links.yml</span></div>
+    <div class="links-grid">
+      <a class="link-item" href="https://sumobaby.com" target="_blank"><span class="link-label">sumo_baby</span><span class="link-url">sumobaby.com</span></a>
+      <a class="link-item" href="https://www.ruiin.xyz" target="_blank"><span class="link-label">ruiin</span><span class="link-url">ruiin.xyz</span></a>
+      <a class="link-item" href="https://etherlaken.com" target="_blank"><span class="link-label">etherlaken</span><span class="link-url">etherlaken.com</span></a>
+      <a class="link-item" href="https://letsdefinecreative.com" target="_blank"><span class="link-label">define_creative</span><span class="link-url">letsdefinecreative.com</span></a>
+      <a class="link-item" href="https://navel.la" target="_blank"><span class="link-label">navel_la</span><span class="link-url">navel.la</span></a>
+      <a class="link-item" href="https://navel.live" target="_blank"><span class="link-label">navel_live</span><span class="link-url">navel.live</span></a>
+      <a class="link-item" href="https://instagram.com/navel.la" target="_blank"><span class="link-label">@navel.la</span><span class="link-url">instagram.com/navel.la</span></a>
+      <a class="link-item" href="https://instagram.com/navel.live" target="_blank"><span class="link-label">@navel.live</span><span class="link-url">instagram.com/navel.live</span></a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>caspar_boehme_cv <span style="color:var(--dim)">v2026.03</span></span>
+    <span>
+      <a href="mailto:casparboehme@googlemail.com" style="color:var(--dim);text-decoration:none">casparboehme@googlemail.com</a>
+      <span class="sep">—</span>
+      <span class="cursor-blink" style="color:var(--green)">⏎</span>
+    </span>
+  </div>
+
+</div>
+
+<script>
+let activeFilter = null;
+
+document.querySelectorAll('.comp-item').forEach(el => {
+  el.onclick = () => toggleFilter(el.dataset.comp, el);
+});
+
+function toggleFilter(comp, el) {
+  if (activeFilter === comp) { resetFilter(); return; }
+  activeFilter = comp;
+
+  const compColor = getComputedStyle(el).borderLeftColor;
+
+  document.querySelectorAll('.comp-item').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+
+  let matchCount = 0;
+  document.querySelectorAll('.exp-card').forEach(card => {
+    const cardTags = (card.dataset.tags || '').split(',');
+    const matches = cardTags.includes(comp);
+
+    card.classList.toggle('dimmed', !matches);
+    card.classList.toggle('highlighted', matches);
+
+    if (matches) {
+      card.style.borderColor = compColor;
+      card.style.boxShadow = `0 0 20px ${compColor}22, inset 0 0 0 1px ${compColor}44`;
+    } else {
+      card.style.borderColor = '';
+      card.style.boxShadow = '';
+    }
+
+    card.querySelectorAll('.exp-tag').forEach(tag => {
+      const isMatch = tag.dataset.tag === comp;
+      tag.classList.toggle('matched', isMatch);
+      if (isMatch) {
+        tag.style.color = compColor;
+        tag.style.borderColor = compColor;
+        tag.style.background = compColor.replace('rgb', 'rgba').replace(')', ', 0.1)');
+      } else {
+        tag.style.color = '';
+        tag.style.borderColor = '';
+        tag.style.background = '';
+      }
+    });
+
+    if (matches) matchCount++;
+  });
+
+  document.getElementById('filterLabel').innerHTML =
+    `<span class="filter-label">filter:</span> <span style="color:${compColor}">${comp}</span> <span style="color:var(--dim)">(${matchCount} ${matchCount === 1 ? 'Projekt' : 'Projekte'})</span>`;
+  document.getElementById('filterReset').classList.add('visible');
+  document.getElementById('expContainer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function resetFilter() {
+  activeFilter = null;
+  document.querySelectorAll('.comp-item').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.exp-card').forEach(c => {
+    c.classList.remove('dimmed', 'highlighted');
+    c.style.borderColor = '';
+    c.style.boxShadow = '';
+    c.querySelectorAll('.exp-tag').forEach(t => {
+      t.classList.remove('matched');
+      t.style.color = '';
+      t.style.borderColor = '';
+      t.style.background = '';
+    });
+  });
+  document.getElementById('filterLabel').innerHTML = '';
+  document.getElementById('filterReset').classList.remove('visible');
+}
+
+// Typewriter
+const twEl = document.getElementById('typewriter');
+const twCursor = document.querySelector('.tw-cursor');
+const twText = twEl.textContent;
+let twStarted = false;
+
+function typeWriter(text, el, i = 0) {
+  if (i < text.length) {
+    el.textContent += text.charAt(i);
+    const delay = text.charAt(i) === ',' ? 120 : text.charAt(i) === '—' ? 150 : text.charAt(i) === '.' ? 200 : 25 + Math.random() * 25;
+    setTimeout(() => typeWriter(text, el, i + 1), delay);
+  } else {
+    setTimeout(() => twCursor.style.display = 'none', 2000);
+  }
+}
+
+const twObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !twStarted) {
+      twStarted = true;
+      twEl.textContent = '';
+      twCursor.style.display = '';
+      setTimeout(() => typeWriter(twText, twEl), 400);
+    }
+  });
+}, { threshold: 0.5 });
+
+twObserver.observe(twEl.parentElement);
+</script>
+</body>
+</html>

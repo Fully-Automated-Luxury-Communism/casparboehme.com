@@ -232,6 +232,11 @@ app.get('/health', (req, res) => {
     });
 });
 
+// CV page
+app.get('/cv', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'cv.html'));
+});
+
 // Serve frontend
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
